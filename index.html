@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Jinie - Elevated Business Gifting</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background-color: #f0f9f5;  /* base color beneath artwork */
+            margin: 0;
+            background-image: url("heyjinie/images/background.png");
+            background-repeat: repeat-y;      /* extend through entire page */
+            background-position: center top;  /* align artwork */
+            background-size: 100% auto;       /* full width, keep aspect */
+        }
+
+        /* Wrapper for page content */
+        .with-bg {
+            position: relative; /* anchor absolute decorations */
+        }
+
+
+
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            background: transparent; /* allow background image to show from very top */
+            backdrop-filter: none;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .logo::before {
+            content: '';
+            width: 24px;
+            height: 24px;
+            background: #333;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .get-started-btn {
+            background: #40A574;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+            display: inline-block;
+            width: 180px;   /* set fixed width */
+            text-align: center;
+        }
+
+        .get-started-btn:hover {
+            background: #45a049;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 0 140px;
+            position: relative;
+            overflow: hidden;
+            background: transparent; /* show page background image */
+            min-height: 600px;
+        }
+
+        .hero-subtitle {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-description {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .try-pro-btn {
+            background: #40A574;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+
+        .try-pro-btn:hover {
+            background: #45a049;
+        }
+
+        /* Decorative Elements */
+        .hero-decoration {
+            position: absolute;
+            z-index: 1;
+        }
+
+        .headphones {
+            top: 60px;
+            left: 60px;
+            width: 210px;
+            height: 210px;
+            /* background: url("/heyjinie/images/star.png") no-repeat center; */
+            background-size: contain;
+            transform: none;
+        }
+
+        .mcdonalds-logo {
+            top: 90px;
+            right: 80px;
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #DA020E;
+            font-size: 24px;
+        }
+
+        .sneaker {
+            top: 240px;
+            right: 110px;
+            width: 180px;
+            height: 180px;
+            /* background: url('/heyjinie/images/star.png') no-repeat; */
+            background-position: top;   
+            background-size: contain;
+            transform: rotate(-15deg);
+
+        }
+
+        .starbucks-logo {
+            top: 320px;
+            left: 50px;
+            width: 100px;
+            height: 100px;
+            background: none;
+            border-radius: 0;
+        }
+
+        /* Trusted Brands */
+        .trusted-brands {
+            text-align: center;
+            padding: 60px 0;
+            background: transparent;
+
+        }
+
+        .trusted-brands h3 {
+            color: red;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 40px;
+        }
+
+        .brands-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;           /* spacing between logos */
+            flex-wrap: nowrap;   /* keeps them all in one line */
+            overflow-x: auto;    /* allows horizontal scroll if too many logos */
+        }
+
+        .brands-grid img {
+            height: 20px;        /* make all logos the same height */
+            width: auto;         /* keep proportions */
+            object-fit: contain; /* ensures logos don’t stretch weirdly */
+        }
+
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+        }
+
+        .features-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .features-title {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .features-subtitle {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 100px;
+            gap: 80px;
+        }
+
+        /* Alternate layout left/right reliably across only the feature blocks */
+        .features .feature:nth-of-type(even) {
+            flex-direction: row-reverse;
+        }
+
+        .feature-content {
+            flex: 1;
+        }
+
+        .feature-visual {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .feature h3 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .feature p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Feature imagery */
+        .feature-visual img { max-width: 100%; height: auto; display: block; position: relative; z-index: 1; }
+        .gifting-wheel-img { width: 260px; }
+        .calendar-img { width: 240px; }
+        .gift-boxes { display: flex; gap: 20px; }
+        .gift-box-img { width: 90px; }
+        .dashboard-img { width: 300px; }
+        .marketing-img { width: 220px; }
+
+        /* Decorative squares behind middle feature images */
+        .features .feature .feature-visual::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 320px;
+            height: 320px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Odd features: left square */
+        .features .feature:nth-of-type(odd) .feature-visual::before {
+            background-image: url('heyjinie/images/left_square.png');
+        }
+
+        /* Even features: right square */
+        .features .feature:nth-of-type(even) .feature-visual::before {
+            background-image: url('heyjinie/images/right_square.png');
+        }
+
+        /* Gift Options Section */
+        .gift-options {
+            text-align: center;
+            padding: 80px 0;
+            background: transparent;
+        }
+
+        .gift-options .container { position: relative; }
+
+        .gift-options h2 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .gift-options p {
+            font-size: 16px;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto 60px;
+        }
+
+        .hm-logo {
+            position: absolute;
+            left: 20px;
+            top: 200px; /* just under the paragraph line */
+            height: 70px;
+            width: auto;
+            margin: 0;
+        }
+
+        .get-started-final {
+            background: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 80px 0;
+            position: relative;
+            background: transparent; /* show page background image */
+        }
+
+        .footer h2 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .footer-decoration {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 100px;
+            height: 100px;
+            background: url('/placeholder.svg?height=100&width=100') no-repeat center;
+            background-size: contain;
+        }
+
+        /* Footer gift box left-centered */
+        .footer-gift {
+            position: absolute;
+            right: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100px;
+            height: auto;
+        }
+
+        /* Decorative logos inside gift-options */
+        .gift-options .deco-burger,
+        .gift-options .deco-tommy {
+            position: absolute;
+            z-index: 1;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .gift-options .deco-burger {
+            bottom: 120px; /* above the Get Started button */
+            right: 120px;
+            width: 120px;
+            height: auto;
+        }
+
+        .gift-options .deco-tommy {
+            bottom: 140px; /* above the Get Started button */
+            left: 60px;
+            width: 70px;
+            height: auto;
+            transform: rotate(-18deg);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 32px;
+            }
+            
+            .feature {
+                flex-direction: column !important;
+                text-align: center;
+                gap: 40px;
+            }
+            
+            .brands-grid {
+                gap: 30px;
+            }
+            
+            .nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+     <div class="with-bg">
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <img src="heyjinie/images/HEYJINNIELOGO.svg" alt="Jinie Logo" />
+                <nav>
+                    <a href="#about">About</a>
+                    <a href="#contact">Home</a>
+                    <a href="#" class="get-started-btn">Pro</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-subtitle">Hey Jinie Pro Version</div>
+            <h1 class="hero-title">Elevated<br>Business Gifting</h1>
+            <p class="hero-description">Get Effective with Your Gift Giving Strategy</p>
+            <a href="#" class="try-pro-btn">Try Pro for Free</a>
+        </div>
+        
+        <!-- Decorative Elements -->
+        <img src="heyjinie/images/Headphones.png" class="hero-decoration headphones" alt="Headphones">
+        <img src="heyjinie/images/MC.png" class="hero-decoration mcdonalds-logo" alt="McDonald's">
+        <img src="heyjinie/images/orange_nike.png" class="hero-decoration sneaker" alt="Nike shoe">
+        <img src="heyjinie/images/starbucks.png" class="hero-decoration starbucks-logo" alt="Starbucks">
+    </section>
+
+    <!-- Trusted Brands -->
+    <section class="trusted-brands">
+        <div class="container">
+            <h3>Trusted by your favorite brands</h3>
+            <div class="brands-grid">
+                <img src="heyjinie/images/Diesel.png" alt="DIESEL-LOGO">
+                <img src="heyjinie/images/Dockers.png" alt="DOCKERS-LOGO">
+                <img src="heyjinie/images/patagonia.png" alt="patagonia-LOGO">
+                <img src="heyjinie/images/adidas.png" alt="adidas-LOGO">
+                <img src="heyjinie/images/levis.png" alt="Levi's-LOGO">
+                <img src="heyjinie/images/George.png" alt="George-LOGO">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <!-- The Gifting Wheel -->
+            <div class="feature">
+                <div class="feature-visual">
+                    <img src="heyjinie/images/spinwheel.png" alt="Gifting Wheel" class="gifting-wheel-img" />
+                </div>
+                <div class="feature-content">
+                    <h3>The Gifting Wheel</h3>
+                    <p>Win endless gifting possibilities with just one spin!</p>
+                </div>
+            </div>
+
+
+            <!-- The Reward Calendar -->
+            <div class="feature">
+                <div class="feature-visual">
+                    <img src="heyjinie/images/calendar.png" alt="Reward Calendar" class="calendar-img" />
+                </div>
+                <div class="feature-content">
+                    <h3>The Reward Calendar</h3>
+                    <p>Unlock 12 days of exclusive gifts, discounts, and special offers as everyday should be celebrated.</p>
+                </div>
+            </div>
+
+            <!-- The Giving Points -->
+            <div class="feature">
+                <div class="feature-visual">
+                    <div class="gift-boxes">
+                        <img src="heyjinie/images/gift_box.png" alt="Gift box" class="gift-box-img" />                    </div>
+                </div>
+                <div class="feature-content">
+                    <h3>The Giving Points</h3>
+                    <p>Earn loyalty points with every purchase! Redeem for exclusive discounts, special perks, and surprise rewards.</p>
+                </div>
+
+            </div>
+
+            <!-- Interactive Account Dashboard -->
+            <div class="feature">
+                <div class="feature-visual">
+                    <img src="heyjinie/images/screen.png" alt="Dashboard" class="dashboard-img" />
+                </div>
+                <div class="feature-content">
+                    <h3>Interactive Account Dashboard</h3>
+                    <p>Track your spending, GivingIs sent, and days made.</p>
+                </div>
+            </div>
+
+            <!-- Mass Gifting With No Fees -->
+            <div class="feature">
+                <div class="feature-visual">
+                    <img src="heyjinie/images/marketing.png" alt="Mass gifting" class="marketing-img" />
+                </div>
+                <div class="feature-content">
+                    <h3>Mass Gifting With No Fee</h3>
+                    <p>Send to 100+ people with one click. No Gifting Fee.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gift Options -->
+    <section class="gift-options">
+        <div class="container">
+            <h2>100K+ gift options from brands they love.</h2>
+            <p>Send gifts your team and clients will actually want. Plus, if recipients prefer a different gift, they can easily swap for something else.</p>
+            <img src="heyjinie/images/H&M.png" class="hm-logo" alt="H&M" />
+            <img src="heyjinie/images/burger.png" alt="burger" class="deco-burger" />
+            <img src="heyjinie/images/tommy_hilfiger.png" alt="tommy" class="deco-tommy" />
+            <a href="#" class="get-started-final">Get Started</a>
+            <div class="container">
+             <div class="footer-decoration"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+    <img src="heyjinie/images/image.png" alt="gift-box" class="footer-gift" />
+    </section>
+     <!-- page decorations aligned with background flow -->
+     </div>
+</body>
+</html>
