@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Jinie - Elevated Business Gifting</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background-color: #f0f9f5;  /* base color beneath artwork */
+            margin: 0;
+            background-image: url("heyjinie/images/background.png");
+            background-repeat: no-repeat;     /* don't repeat the image */
+            background-position: center top;  /* align artwork */
+            background-size: cover;           /* cover entire viewport */
+            background-attachment: scroll;    /* scroll with content */
+            min-height: 110vh;               /* ensure minimum page height */
+            overflow-x: hidden;              /* prevent horizontal scroll */
+        }
+
+        /* Wrapper for page content */
+        .with-bg {
+            position: relative; /* anchor absolute decorations */
+        }
+
+
+
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            background: transparent; /* allow background image to show from very top */
+            backdrop-filter: none;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+            max-width: 100%;
+        }
+
+        .logo::before {
+            content: '';
+            width: 24px;
+            height: 24px;
+            background: #333;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #666;
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        .get-started-btn {
+            background: #40A574;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+            display: inline-block;
+            width: 180px;   /* set fixed width */
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .get-started-btn:hover {
+            background: #45a049;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 0 140px;
+            position: relative;
+            overflow: hidden;
+            background: transparent; /* show page background image */
+            min-height: 600px;
+        }
+
+        .hero-subtitle {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-description {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .try-pro-btn {
+            background: #40A574;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: background 0.3s;
+            font-size: 18px;
+        }
+
+        .try-pro-btn:hover {
+            background: #45a049;
+        }
+
+        /* Decorative Elements */
+        .hero-decoration {
+            position: absolute;
+            z-index: 1;
+        }
+
+        .headphones {
+            top: 210px;
+            left: 40px;
+            width: 210px;
+            height: 210px;
+            background-size: contain;
+            transform: rotate(45deg);
+        }
+
+        .mcdonalds-logo {
+            top: 90px;
+            right: 80px;
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #DA020E;
+            font-size: 24px;
+        }
+
+        .sneaker {
+            top: 490px;
+            right: 60px;
+            width: 180px;
+            height: 180px;
+            background-position: top;   
+            background-size: contain;
+            transform: rotate(15deg);
+        }
+        .star-2 {
+            top: 460px;
+            right: 50px;
+            width: 120px;
+            height: 120px;
+            z-index: 0;
+            /* background-size: contain; */
+        }
+
+        .starbucks-logo {
+            top: 550px;
+            left: 50px;
+            width: 100px;
+            height: 100px;
+            background: none;
+            border-radius: 0;
+        }
+
+        .watch {
+            top: 10px;
+            left: 80px;
+            width: 80px;
+            height: 80px;
+            background-size: contain;
+        }
+
+        .coffee-cup {
+            top: 220px;
+            right: 200px;
+            width: 60px;
+            height: 60px;
+            background-size: contain;
+        }
+
+        .bubble {
+            top: 200px;
+            right: 180px;
+            width: 40px;
+            height: 40px;
+            background-size: contain;
+        }
+
+        .star {
+            top: 300px;
+            left: 40px;
+            width: 120px;
+            height: 120px;
+            z-index: 0;
+            /* background-size: contain; */
+        }
+
+        /* Trusted Brands */
+        .trusted-brands {
+            text-align: center;
+            padding: 60px 0;
+            background: transparent;
+
+        }
+
+        .trusted-brands h3 {
+            color: red;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 40px;
+        }
+
+        .brands-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;           /* spacing between logos */
+            flex-wrap: wrap;     /* allows wrapping to next line */
+            overflow-x: visible; /* no horizontal scroll */
+        }
+
+        .brands-grid img {
+            height: 20px;        /* make all logos the same height */
+            width: auto;         /* keep proportions */
+            object-fit: contain; /* ensures logos don't stretch weirdly */
+        }
+
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            position: relative; /* contain absolute feature decorations */
+            background-color: white;
+        }
+
+        .features-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .features-header h2 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .features-header p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 100px;
+            gap: 40px;
+        }
+
+        /* Group only feature blocks to avoid interference from other siblings */
+        .feature-list { display: flex; flex-direction: column; }
+
+        /* Alternate layout left/right reliably across only the feature blocks */
+        .feature-list > .feature:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .feature-content {
+            flex: 0 1 auto;
+            max-width: 400px;
+        }
+
+        .feature-visual {
+            flex: 0 1 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .feature h3 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .feature p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Feature imagery */
+        .feature-visual img { max-width: 100%; height: auto; display: block; position: relative; z-index: 1; }
+        .gifting-wheel-img { width: 350px; }
+        .calendar-img { width: 280px; }
+        .gift-boxes { display: flex; gap: 20px; }
+        .gift-box-img { width: 250px; }
+        .dashboard-img { width: 300px; }
+        .marketing-img { width: 220px; }
+
+        /* Raise feature visuals approximately 1 inch on desktop */
+        @media (min-width: 769px) {
+            .feature-visual .image-card { margin-top: -96px; }
+        }
+
+        /* Image card wrapper to match reference design */
+
+        /* playful slight tilt like the mock */
+        .feature-list > .feature:nth-child(odd) .image-card { transform: rotate(-6deg); }
+        .feature-list > .feature:nth-child(even) .image-card { transform: rotate(6deg); }
+
+        /* Decorative squares behind middle feature images */
+        .features .feature .feature-visual::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 320px;
+            height: 320px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Feature section decorative elements */
+        .feature-decoration {
+            position: absolute;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .watch-feature {
+            top: 70px;
+            left: 150px;
+            width: 140px;
+            height: 140px;
+        }
+
+        .coffee-feature {
+            top: 380px;
+            right: 100px;
+            width: 140px;
+            height: 140px;
+        }
+
+        .bubble-feature {
+            top: 240px;
+            right: 160px;
+            width: 80px;
+            height: 80px;
+        }
+
+        .star-feature {
+            top: 300px;
+            left: 100px;
+            width: 50px;
+            height: 50px;
+        }
+
+        /* Odd features: left square */
+        .feature-list > .feature:nth-child(odd) .feature-visual::before {
+            background-image: url('heyjinie/images/left_square.png');
+        }
+
+        /* Even features: right square */
+        .feature-list > .feature:nth-child(even) .feature-visual::before {
+            background-image: url('heyjinie/images/right_square.png');
+        }
+
+        /* Gift Options Section */
+        .gift-options {
+            text-align: center;
+            padding: 80px 0;
+            background: transparent;
+        }
+
+        .gift-options .container { position: relative; }
+
+        .gift-options h2 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .gift-options p {
+            font-size: 16px;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto 60px;
+        }
+
+        .hm-logo {
+            position: absolute;
+            left: 20px;
+            top: 300px; /* just under the paragraph line */
+            height: 70px;
+            width: auto;
+            margin: 0;
+        }
+
+        .get-started-final {
+            background: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            font-size: 18px;
+            margin: 40px 0; /* Add vertical spacing above and below button */
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 80px 0;
+            position: relative;
+            background-color: #f0f9f5; /* light green background like the image */
+        }
+
+        .footer h2 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .footer-decoration {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 100px;
+            height: 100px;
+            background: url('/placeholder.svg?height=100&width=100') no-repeat center;
+            background-size: contain;
+        }
+
+        /* Footer gift box left-centered */
+        .footer-gift {
+            position: absolute;
+            right: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100px;
+            height: auto;
+        }
+
+        /* Footer stars */
+        .footer-decoration {
+            position: absolute;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .star-left {
+            bottom: 40px;
+            left: 40px;
+            width: 60px;
+            height: 60px;
+        }
+
+        .star-right {
+            bottom: 200px;
+            right: 180px;
+            width: 60px;
+            height: 60px;
+        }
+
+        /* Decorative logos inside gift-options */
+        .gift-options .deco-burger,
+        .gift-options .deco-tommy {
+            position: absolute;
+            z-index: 1;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .gift-options .deco-burger {
+            position: absolute;
+            top: -242px; /* 2 inches (192px) higher than before */
+            right: 120px;
+            width: 200px;
+            height: auto;
+            transform: rotate(-5deg);
+            z-index: 1;
+        }
+
+        .gift-options .deco-tommy {
+            position: absolute;
+            top: -100px; /* 2 inches (192px) higher than before */
+            left: 320px;
+            width: 70px;
+            height: auto;
+            transform: rotate(5deg);
+            z-index: 1;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            /* Background responsive */
+            body {
+                background-size: cover;
+                background-position: center top;
+                background-repeat: no-repeat;
+                min-height: 100vh;
+            }
+
+            /* General responsive adjustments */
+            .container {
+                padding: 0 15px;
+            }
+
+            /* Header responsive */
+            header {
+                padding: 15px 0;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+
+            .logo img {
+                height: 30px;
+            }
+
+            .logo::before {
+                width: 20px;
+                height: 20px;
+            }
+
+            nav {
+                gap: 20px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            .get-started-btn {
+                width: 150px;
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+
+            /* Hero responsive */
+            .hero-title {
+                font-size: 32px;
+                line-height: 1.1;
+            }
+
+            .hero {
+                padding: 60px 0 100px;
+                min-height: 500px;
+            }
+
+            .hero-subtitle {
+                font-size: 14px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .try-pro-btn {
+                padding: 12px 24px;
+                font-size: 14px;
+            }
+
+            /* Hero decorations responsive */
+            .headphones {
+                top: 40px;
+                left: 20px;
+                width: 150px;
+                height: 150px;
+            }
+
+            .mcdonalds-logo {
+                top: 60px;
+                right: 20px;
+                width: 60px;
+                height: 60px;
+                font-size: 18px;
+            }
+
+            .sneaker {
+                top: 180px;
+                right: 30px;
+                width: 120px;
+                height: 120px;
+            }
+
+            .starbucks-logo {
+                top: 240px;
+                left: 20px;
+                width: 70px;
+                height: 70px;
+            }
+
+            .watch {
+                top: 140px;
+                left: 30px;
+                width: 60px;
+                height: 60px;
+            }
+
+            .coffee-cup {
+                top: 180px;
+                right: 100px;
+                width: 45px;
+                height: 45px;
+            }
+
+            .bubble {
+                top: 160px;
+                right: 80px;
+                width: 30px;
+                height: 30px;
+            }
+
+            .star {
+                top: 220px;
+                left: 60px;
+                width: 40px;
+                height: 40px;
+                z-index: 0;
+            }
+
+            /* Trusted brands responsive */
+            .trusted-brands {
+                padding: 40px 0;
+            }
+
+            .trusted-brands h3 {
+                font-size: 12px;
+                margin-bottom: 30px;
+            }
+
+            .brands-grid {
+                gap: 40px;
+                flex-wrap: wrap;
+                justify-content: center;
+                max-width: 100%;
+            }
+
+            .brands-grid img {
+                height: 16px;
+            }
+
+            /* Features responsive */
+            .features {
+                padding: 60px 0;
+            }
+
+            .features-header h2 {
+                font-size: 28px;
+                margin-bottom: 8px;
+            }
+
+            .features-header p {
+                font-size: 16px;
+            }
+
+            .features .feature {
+                flex-direction: column !important;
+                text-align: center;
+                gap: 40px;
+                margin-bottom: 80px;
+            }
+
+            .feature h3 {
+                font-size: 24px;
+            }
+
+            .feature p {
+                font-size: 15px;
+            }
+
+            /* Feature images responsive */
+            .gifting-wheel-img {
+                width: 200px;
+            }
+
+            .calendar-img {
+                width: 180px;
+            }
+
+            .gift-box-img {
+                width: 70px;
+            }
+
+            .dashboard-img {
+                width: 250px;
+            }
+
+            .marketing-img {
+                width: 180px;
+            }
+
+            /* Decorative squares responsive */
+            .features .feature .feature-visual::before {
+                width: 250px;
+                height: 250px;
+            }
+
+            /* Feature decorations responsive */
+            .watch-feature {
+                top: 160px;
+                left: 30px;
+                width: 60px;
+                height: 60px;
+            }
+
+            .coffee-feature {
+                top: 200px;
+                right: 50px;
+                width: 45px;
+                height: 45px;
+            }
+
+            .bubble-feature {
+                top: 180px;
+                right: 40px;
+                width: 30px;
+                height: 30px;
+            }
+
+            .star-feature {
+                top: 240px;
+                left: 60px;
+                width: 40px;
+                height: 40px;
+            }
+
+            /* Gift options responsive */
+            .gift-options {
+                padding: 60px 0;
+            }
+
+            .gift-options h2 {
+                font-size: 28px;
+                margin-bottom: 30px;
+            }
+
+            .gift-options p {
+                font-size: 15px;
+                margin-bottom: 40px;
+            }
+
+            .hm-logo {
+                position: static;
+                height: 50px;
+                margin: 0 auto 30px;
+                display: block;
+            }
+
+            .get-started-final {
+                padding: 12px 24px;
+                font-size: 14px;
+                margin: 30px 0; /* Responsive spacing for mobile */
+            }
+
+            /* Footer responsive */
+            .footer {
+                padding: 40px 0;
+            }
+
+            .footer h2 {
+                font-size: 24px;
+                max-width: 400px;
+            }
+
+            .footer h2 {
+                font-size: 28px;
+                max-width: 500px;
+            }
+
+            .footer-gift {
+                width: 80px;
+                right: 20px;
+            }
+
+            .star-left {
+                bottom: 30px;
+                left: 20px;
+                width: 50px;
+                height: 50px;
+            }
+
+            .star-right {
+                bottom: 30px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+            }
+
+            /* Decorative elements responsive */
+            .gift-options .deco-burger {
+                bottom: 60px;
+                right: 60px;
+                width: 80px;
+            }
+
+            .gift-options .deco-tommy {
+                bottom: 80px;
+                left: 30px;
+                width: 50px;
+            }
+        }
+
+        /* Small mobile devices */
+        @media (max-width: 480px) {
+            /* Background responsive for small screens */
+            body {
+                background-size: cover;
+                background-position: center top;
+                background-repeat: no-repeat;
+                min-height: 100vh;
+            }
+
+            /* Header responsive for small screens */
+            header {
+                padding: 10px 0;
+            }
+
+            .hero-title {
+                font-size: 28px;
+            }
+
+            .hero {
+                padding: 40px 0 80px;
+                min-height: 400px;
+            }
+
+            .container {
+                padding: 0 10px;
+            }
+
+            .logo {
+                font-size: 18px;
+            }
+
+            .logo img {
+                height: 25px;
+            }
+
+            .logo::before {
+                width: 18px;
+                height: 18px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            .get-started-btn {
+                font-size: 13px;
+                width: 130px;
+                padding: 8px 16px;
+            }
+
+            .feature h3 {
+                font-size: 22px;
+            }
+
+            .gift-options h2 {
+                font-size: 24px;
+            }
+
+            .headphones {
+                width: 120px;
+                height: 120px;
+                top: 30px;
+                left: 10px;
+            }
+
+            .mcdonalds-logo {
+                width: 50px;
+                height: 50px;
+                top: 50px;
+                right: 15px;
+                font-size: 16px;
+            }
+
+            .sneaker {
+                width: 100px;
+                height: 100px;
+                top: 150px;
+                right: 20px;
+            }
+
+            .starbucks-logo {
+                width: 60px;
+                height: 60px;
+                top: 200px;
+                left: 15px;
+            }
+
+            .watch {
+                width: 50px;
+                height: 50px;
+                top: 120px;
+                left: 20px;
+            }
+
+            .coffee-cup {
+                width: 40px;
+                height: 40px;
+                top: 160px;
+                right: 80px;
+            }
+
+            .bubble {
+                width: 25px;
+                height: 25px;
+                top: 140px;
+                right: 60px;
+            }
+
+            .star {
+                width: 35px;
+                height: 35px;
+                top: 100px;
+                left: 40px;
+                z-index: 0;
+            }
+            
+            .brands-grid {
+                gap: 20px;
+            }
+
+            .brands-grid img {
+                height: 14px;
+            }
+
+            .hero-subtitle {
+                font-size: 13px;
+            }
+
+            .hero-description {
+                font-size: 15px;
+            }
+
+            .try-pro-btn {
+                font-size: 13px;
+                padding: 10px 20px;
+            }
+
+            .feature p {
+                font-size: 14px;
+            }
+
+            .gift-options p {
+                font-size: 14px;
+            }
+
+            .get-started-final {
+                font-size: 13px;
+                padding: 10px 20px;
+            }
+
+            .footer {
+                padding: 30px 0;
+            }
+
+            .footer h2 {
+                font-size: 20px;
+                max-width: 300px;
+            }
+
+            .footer-gift {
+                width: 60px;
+                right: 15px;
+            }
+
+            .star-left {
+                bottom: 20px;
+                left: 15px;
+                width: 40px;
+                height: 40px;
+            }
+
+            .star-right {
+                bottom: 20px;
+                right: 15px;
+                width: 40px;
+                height: 40px;
+            }
+
+            .star-left {
+                bottom: 20px;
+                left: 15px;
+                width: 40px;
+                height: 40px;
+            }
+
+            .star-right {
+                bottom: 20px;
+                right: 15px;
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        /* Tablet landscape */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            /* Background responsive for tablets */
+            body {
+                background-size: cover;
+                background-position: center top;
+                background-repeat: no-repeat;
+                min-height: 100vh;
+            }
+
+            /* Header responsive for tablets */
+            header {
+                padding: 18px 0;
+            }
+
+            .hero-title {
+                font-size: 40px;
+            }
+
+            .hero {
+                padding: 70px 0 120px;
+                min-height: 550px;
+            }
+
+            .feature {
+                gap: 60px;
+                margin-bottom: 80px;
+            }
+
+            .feature h3 {
+                font-size: 26px;
+            }
+
+            .gift-options h2 {
+                font-size: 32px;
+            }
+
+            .container {
+                max-width: 900px;
+            }
+
+            .logo {
+                font-size: 22px;
+            }
+
+            .logo img {
+                height: 35px;
+            }
+
+            .logo::before {
+                width: 22px;
+                height: 22px;
+            }
+
+            nav a {
+                font-size: 15px;
+            }
+
+            .get-started-btn {
+                font-size: 15px;
+            }
+
+            .hero-subtitle {
+                font-size: 15px;
+            }
+
+            .hero-description {
+                font-size: 17px;
+            }
+
+            .try-pro-btn {
+                font-size: 17px;
+            }
+
+            .feature p {
+                font-size: 15px;
+            }
+
+            .gift-options p {
+                font-size: 15px;
+            }
+
+            .get-started-final {
+                font-size: 17px;
+            }
+
+            .footer h2 {
+                font-size: 32px;
+                max-width: 550px;
+            }
+        }
+
+        /* Large screens */
+        @media (min-width: 1025px) {
+            /* Background responsive for large screens */
+            body {
+                background-size: cover;
+                background-position: center top;
+                background-repeat: no-repeat;
+                min-height: 100vh;
+            }
+
+            /* Brands grid for large screens */
+            .brands-grid {
+                gap: 80px;
+                flex-wrap: wrap;
+                justify-content: center;
+                max-width: 100%;
+            }
+
+            /* Header responsive for large screens */
+            header {
+                padding: 25px 0;
+            }
+
+            .hero-title {
+                font-size: 52px;
+            }
+
+            .hero {
+                padding: 100px 0 160px;
+                min-height: 700px;
+            }
+
+            .feature {
+                gap: 100px;
+                margin-bottom: 120px;
+            }
+
+            .container {
+                max-width: 1400px;
+            }
+
+            .logo {
+                font-size: 26px;
+            }
+
+            .logo img {
+                height: 45px;
+            }
+
+            .logo::before {
+                width: 26px;
+                height: 26px;
+            }
+
+            nav a {
+                font-size: 17px;
+            }
+
+            .get-started-btn {
+                font-size: 17px;
+            }
+
+            .hero-subtitle {
+                font-size: 17px;
+            }
+
+            .hero-description {
+                font-size: 19px;
+            }
+
+            .try-pro-btn {
+                font-size: 19px;
+            }
+
+            .feature h3 {
+                font-size: 30px;
+            }
+
+            .feature p {
+                font-size: 17px;
+            }
+
+            .gift-options h2 {
+                font-size: 38px;
+            }
+
+            .gift-options p {
+                font-size: 17px;
+            }
+
+            .get-started-final {
+                font-size: 19px;
+            }
+        }
+
+        /* Extra large screens */
+        @media (min-width: 1440px) {
+            body {
+                background-size: cover;
+                background-position: center top;
+                background-repeat: no-repeat;
+                min-height: 100vh;
+            }
+
+            /* Brands grid for extra large screens */
+            .brands-grid {
+                gap: 100px;
+                flex-wrap: wrap;
+                justify-content: center;
+                max-width: 100%;
+            }
+
+            /* Header responsive for extra large screens */
+            header {
+                padding: 30px 0;
+            }
+
+            .hero-title {
+                font-size: 56px;
+            }
+
+            .hero {
+                padding: 120px 0 180px;
+                min-height: 800px;
+            }
+
+            .container {
+                max-width: 1600px;
+            }
+
+            .logo {
+                font-size: 28px;
+            }
+
+            .logo img {
+                height: 50px;
+            }
+
+            .logo::before {
+                width: 28px;
+                height: 28px;
+            }
+
+            nav a {
+                font-size: 18px;
+            }
+
+            .get-started-btn {
+                font-size: 18px;
+            }
+
+            .feature h3 {
+                font-size: 32px;
+            }
+
+            .feature p {
+                font-size: 18px;
+            }
+
+            .gift-options h2 {
+                font-size: 42px;
+            }
+
+            .gift-options p {
+                font-size: 18px;
+            }
+
+            .footer h2 {
+                font-size: 38px;
+                max-width: 600px;
+            }
+        }
+
+        /* Hide navigation on very small screens */
+        @media (max-width: 480px) {
+            .nav {
+                display: none;
+            }
+        }
+
+        /* Ensure images don't overflow on small screens */
+        @media (max-width: 768px) {
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        /* Landscape orientation adjustments */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .hero {
+                padding: 40px 0 80px;
+                min-height: 300px;
+            }
+
+            .hero-title {
+                font-size: 32px;
+            }
+
+            .hero-subtitle {
+                font-size: 14px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .headphones {
+                width: 120px;
+                height: 120px;
+            }
+
+            .mcdonalds-logo {
+                width: 60px;
+                height: 60px;
+            }
+
+            .sneaker {
+                width: 100px;
+                height: 100px;
+            }
+
+            .starbucks-logo {
+                width: 70px;
+                height: 70px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+     <div class="with-bg">
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <img src="heyjinie/images/HEYJINNIELOGO.svg" alt="Jinie Logo" />
+                <nav>
+                    <a href="#about">About</a>
+                    <a href="#contact">Home</a>
+                    <a href="#" class="get-started-btn">Pro</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-subtitle">Hey Jinie Pro Version</div>
+            <h1 class="hero-title">Elevated<br>Business Gifting</h1>
+            <p class="hero-description">Get Effective with Your Gift Giving Strategy</p>
+            <a href="#" class="try-pro-btn">Try Pro for Free</a>
+        </div>
+        
+        <!-- Decorative Elements -->
+        <img src="heyjinie/images/Headphones.png" class="hero-decoration headphones" alt="Headphones">
+        <img src="heyjinie/images/MC.png" class="hero-decoration mcdonalds-logo" alt="McDonald's">
+        <img src="heyjinie/images/orange_nike.png" class="hero-decoration sneaker" alt="Nike shoe">
+        <img src="heyjinie/images/starbucks.png" class="hero-decoration starbucks-logo" alt="Starbucks">
+        <img src="heyjinie/images/star.png" class="hero-decoration star" alt="Star">
+        <img src="heyjinie/images/star.png" class="hero-decoration star-2" alt="Star">
+    </section>
+
+    <!-- Trusted Brands -->
+    <section class="trusted-brands">
+        <div class="container">
+            <h3>Trusted by your favorite brands</h3>
+            <div class="brands-grid">
+                <img src="heyjinie/images/Diesel.png" alt="DIESEL-LOGO">
+                <img src="heyjinie/images/Dockers.png" alt="DOCKERS-LOGO">
+                <img src="heyjinie/images/patagonia.png" alt="patagonia-LOGO">
+                <img src="heyjinie/images/adidas.png" alt="adidas-LOGO">
+                <img src="heyjinie/images/levis.png" alt="Levi's-LOGO">
+                <img src="heyjinie/images/George.png" alt="George-LOGO">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="features-header">
+                <h2>The smarter way to gift for corporates</h2>
+                <p>Here is how it works</p>
+            </div>
+            
+            <!-- Decorative Elements for Features Section -->
+            <img src="heyjinie/images/OrangeWatch.png" class="feature-decoration watch-feature" alt="Orange Watch">
+            <img src="heyjinie/images/coffee.png" class="feature-decoration coffee-feature" alt="Coffee Cup">
+            <img src="heyjinie/images/Circles.png" class="feature-decoration bubble-feature" alt="Bubble">
+
+            <div class="feature-list">
+            <!-- The Gifting Wheel -->
+            <div class="feature">
+                <div class="feature-visual">
+                    <div class="image-card">
+                        <img src="heyjinie/images/spinwheel.png" alt="Gifting Wheel" class="gifting-wheel-img" />
+                    </div>
+
+                </div>
+                <div class="feature-content">
+                    <h3>The Gifting Wheel</h3>
+                    <p>Win endless gifting possibilities with just one spin!</p>
+                </div>
+            </div>
+
+
+            <!-- The Reward Calendar -->
+            <div class="feature">
+                <div class="feature-visual">
+                    <div class="image-card">
+                        <img src="heyjinie/images/calendar.png" alt="Reward Calendar" class="calendar-img" />
+                    </div>
+                </div>
+                <div class="feature-content">
+                    <h3>The Reward Calendar</h3>
+                    <p>Unlock 12 days of exclusive gifts, discounts, and special offers as everyday should be celebrated.</p>
+                </div>
+            </div>
+
+            <!-- The Giving Points -->
+            <div class="feature">
+                <div class="feature-visual">
+                    <div class="image-card">
+                        <div class="">
+                            <img src="heyjinie/images/gift_box.png" alt="Gift box" class="gift-box-img" />
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-content">
+                    <h3>The Giving Points</h3>
+                    <p>Earn loyalty points with every purchase! Redeem for exclusive discounts, special perks, and surprise rewards.</p>
+                </div>
+
+            </div>
+
+            <!-- Interactive Account Dashboard -->
+            <div class="feature">
+                <div class="feature-visual">
+                    <div class="image-card">
+                        <img src="heyjinie/images/screen.png" alt="Dashboard" class="dashboard-img" />
+                    </div>
+                </div>
+                <div class="feature-content">
+                    <h3>Interactive Account Dashboard</h3>
+                    <p>Track your spending, GivingIs sent, and days made.</p>
+                </div>
+            </div>
+
+            <!-- Mass Gifting With No Fees -->
+            <div class="feature">
+                <div class="feature-visual">
+                    <div class="image-card">
+                        <img src="heyjinie/images/marketing.png" alt="Mass gifting" class="marketing-img" />
+                    </div>
+                </div>
+                <div class="feature-content">
+                    <h3>Mass Gifting With No Fee</h3>
+                    <p>Send to 100+ people with one click. No Gifting Fee.</p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gift Options -->
+    <section class="gift-options">
+        <div class="container">
+            <img src="heyjinie/images/burger.png" alt="burger" class="deco-burger" />
+            <img src="heyjinie/images/tommy_hilfiger.png" alt="tommy" class="deco-tommy" />
+            <a href="#" class="get-started-final">Get Started</a>
+            <h2>100K+ gift options from brands they love.</h2>
+            <p>Send gifts your team and clients will actually want. Plus, if recipients prefer a different gift, they can easily swap for something else.</p>
+            <img src="heyjinie/images/H&M.png" class="hm-logo" alt="H&M" />
+            <div class="container">
+             <div class="footer-decoration"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+        <div class="container">
+            <h2>Hey Hinie is the easiest way to spread joy!</h2>
+            <img src="heyjinie/images/star.png" class="footer-decoration star-left" alt="Star">
+            <img src="heyjinie/images/star.png" class="footer-decoration star-right" alt="Star">
+            <img src="heyjinie/images/image.png" alt="gift-box" class="footer-gift" />
+        </div>
+    </section>
+     <!-- page decorations aligned with background flow -->
+     </div>
+</body>
+</html>
