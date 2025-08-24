@@ -89,7 +89,7 @@
 
         /* Parallax effect - images move UP when scrolling down */
         .star {
-            transform: translateX(calc(var(--scroll-y, 0) * 0.2px)) translateY(calc(var(--scroll-y, 0) * -0.55px)) !important;
+            transform: translateX(calc(var(--scroll-y, 0) * 0.1px)) translateY(calc(var(--scroll-y, 0) * -0.4px)) !important;
         }
         
         .headphones {
@@ -378,11 +378,12 @@
 
         .star {
             top: 80px;
-            left: 45px;
+            left: 35px;
             width: 120px;
             height: 120px;
             z-index: 0;
             max-width: 100%;
+            transform: rotate(45deg) translateY(calc(var(--scroll-y, 0) * -0.4px)) !important;
             height: auto;
             /* background-size: contain; */
         }
@@ -617,7 +618,7 @@
             height: auto;
         }
         .calendar-img { 
-            width: 400px !important; 
+            width: 350px !important; 
             max-width: 100%;
             height: auto;
         }
