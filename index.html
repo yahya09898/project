@@ -1360,8 +1360,8 @@
             .star {
                 width: 60px;
                 height: 60px;
-                top: 0px;
-                left: 20px;
+                top: 40px;
+                left: 10px;
                 z-index: 0;
             }
 
@@ -1378,19 +1378,29 @@
             .features .feature .feature-visual::before {
                 width: 800px;
                 height: 800px;
-                max-width: 85%;
-                max-height: 85%;
+                max-width: 200%;
+                max-height: 95%;
+                overflow: visible;
             }
             
             /* Small mobile responsive squares - specific selectors */
-            .feature-list > .feature:nth-child(odd) .feature-visual::before {
+            .feature-list > .feature:nth-child(1) .feature-visual::before {
                 width: 800px !important;
                 height: 800px !important;
+                background-size: 50% !important;
+            }
+            
+            .feature-list > .feature:nth-child(3) .feature-visual::before,
+            .feature-list > .feature:nth-child(5) .feature-visual::before {
+                width: 800px !important;
+                height: 800px !important;
+                background-size: 70% !important;
             }
             
             .feature-list > .feature:nth-child(even) .feature-visual::before {
                 width: 800px !important;
                 height: 800px !important;
+                background-size: 60% !important;
             }
             
             .brands-grid {
@@ -1614,10 +1624,17 @@
             
             /* Tablet decorative elements - maintaining same relative positions */
             .headphones {
-                top: 430px;
-                left: 26px;
+                top: 50px;
+                left: 50px;
                 width: 157px;
                 height: 157px;
+            }
+
+            .star {
+                top: 100px;
+                left: 45px;
+                width: 90px;
+                height: 90px;
             }
             
             .mcdonalds-logo {
@@ -1629,24 +1646,31 @@
             }
             
             .sneaker {
-                top: 495px;
-                right: 22px;
+                top: 295px;
+                right: 45px;
                 width: 177px;
                 height: 115px;
             }
+
+            .star-2 {
+                top: 250px;
+                right: 50px;
+                width: 90px;
+                height: 90px;
+            }
             
             .starbucks-logo {
-                top: 670px;
-                left: 37px;
+                top: 320px;
+                left: 80px;
                 width: 67px;
                 height: 70px;
             }
             
-            .watch {
-                top: 7px;
+            .watch-feature {
+                top: 60px;
                 left: 60px;
-                width: 60px;
-                height: 60px;
+                width: 100px;
+                height: 100px;
             }
             
             .coffee-cup {
@@ -1662,19 +1686,26 @@
                 width: 30px;
                 height: 30px;
             }
+
+            .coffee-feature {
+            top: 410px;
+            right: 15px;
+            width: 130px;
+            height: 190px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .bubble-feature {
+            top: 180px;
+            right: 20px;
+            width: 104px;
+            height: 95px;
+            max-width: 100%;
+            height: auto;
+        }
             
-            .star {
-                top: 480px;
-                left: 30px;
-                width: 90px;
-                height: 90px;
-            }
-            .star-2 {
-                top: 480px;
-                right: 30px;
-                width: 90px;
-                height: 90px;
-            }
+
         }
 
         /* Large screens */
