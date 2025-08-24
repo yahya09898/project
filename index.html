@@ -877,6 +877,61 @@
             height: 60px;
         }
 
+        /* Combined Background Wrapper for Last 2 Sections */
+        .combined-background-wrapper {
+            position: relative;
+            background-image: url('heyjinie/images/background.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 1400px auto;
+            background-attachment: scroll;
+            min-height: 400px; /* Ensure minimum height to see the background */
+            /* Hide the body background image in this area */
+            background-color: #f0f9f5; /* Same as body background color */
+        }
+
+        /* Hide body background image specifically for the combined wrapper area */
+        .combined-background-wrapper::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #f0f9f5; /* Cover the body background image */
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Ensure the individual section background colors remain visible but allow background image to show through */
+        .combined-background-wrapper .gift-options {
+            background-color: rgba(236, 246, 241, 0.3); /* More transparent version of #ECF6F1 */
+            position: relative;
+            z-index: 3; /* Above the background cover */
+        }
+
+        .combined-background-wrapper .footer {
+            background-color: rgba(207, 234, 221, 0.8); /* More visible version of #CFEADD */
+            position: relative;
+            z-index: 3; /* Above the background cover */
+        }
+
+        /* Alternative approach using pseudo-element for guaranteed background image display */
+        .combined-background-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('heyjinie/images/background.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 1400px auto;
+            z-index: 3; /* Behind the sections but above the background cover */
+            pointer-events: none;
+        }
+
         /* Decorative logos inside gift-options */
         .gift-options .deco-burger,
         .gift-options .deco-tommy {
@@ -910,12 +965,15 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            /* Background responsive */
+            /* Background responsive - removed body background image */
             body {
-                background-size: cover;
-                background-position: center top;
-                background-repeat: no-repeat;
                 min-height: 100vh;
+            }
+
+            /* Combined background wrapper responsive - maintain desktop size */
+            .combined-background-wrapper {
+                background-size: 1400px auto;
+                background-position: center center;
             }
 
             /* General responsive adjustments */
@@ -1261,12 +1319,15 @@
 
         /* Small mobile devices */
         @media (max-width: 480px) {
-            /* Background responsive for small screens */
+            /* Background responsive for small screens - removed body background image */
             body {
-                background-size: cover;
-                background-position: center top;
-                background-repeat: no-repeat;
                 min-height: 100vh;
+            }
+
+            /* Combined background wrapper responsive - maintain desktop size */
+            .combined-background-wrapper {
+                background-size: 1400px auto;
+                background-position: center center;
             }
 
             /* Feature images for small mobile */
@@ -1554,6 +1615,12 @@
                 min-height: 100vh;
             }
 
+            /* Combined background wrapper responsive - maintain desktop size */
+            .combined-background-wrapper {
+                background-size: 1400px auto;
+                background-position: center center;
+            }
+
             /* Feature images for tablets */
             .gifting-wheel-img {
                 width: 320px;
@@ -1782,6 +1849,12 @@
                 min-height: 100vh;
             }
 
+            /* Combined background wrapper responsive - maintain desktop size */
+            .combined-background-wrapper {
+                background-size: 1400px auto;
+                background-position: center center;
+            }
+
             /* Feature images for large screens */
             .gifting-wheel-img {
                 width: 380px;
@@ -1919,6 +1992,12 @@
                 background-position: center top;
                 background-repeat: no-repeat;
                 min-height: 100vh;
+            }
+
+            /* Combined background wrapper responsive - maintain desktop size */
+            .combined-background-wrapper {
+                background-size: 1400px auto;
+                background-position: center center;
             }
 
             /* Feature images for extra large screens */
@@ -2253,30 +2332,33 @@
         </div>
     </section>
 
-    <!-- Gift Options -->
-    <section class="gift-options">
-        <div class="container">
-            <img src="heyjinie/images/burger.png" alt="burger" class="deco-burger image-animate image-hover image-tilt" />
-            <img src="heyjinie/images/tommy_hilfiger.png" alt="tommy" class="deco-tommy image-animate image-hover image-tilt" />
-            <a href="#" class="get-started-final btn-hover-effect btn-text-animate text-animate scroll-reveal text-stagger-1">Get Started</a>
-            <h2 class="text-animate scroll-reveal text-stagger-2">100K+ gift options from brands they love.</h2>
-            <p class="text-animate scroll-reveal text-stagger-3">Send gifts your team and clients will actually want. Plus, if recipients prefer a different gift, they can easily swap for something else.</p>
-            <img src="heyjinie/images/H&M.png" class="hm-logo image-animate image-hover image-tilt scroll-reveal" alt="H&M" />
+    <!-- Combined Background Wrapper for Last 2 Sections -->
+    <div class="combined-background-wrapper">
+        <!-- Gift Options -->
+        <section class="gift-options">
             <div class="container">
-             <div class="footer-decoration"></div>
+                <img src="heyjinie/images/burger.png" alt="burger" class="deco-burger image-animate image-hover image-tilt" />
+                <img src="heyjinie/images/tommy_hilfiger.png" alt="tommy" class="deco-tommy image-animate image-hover image-tilt" />
+                <a href="#" class="get-started-final btn-hover-effect btn-text-animate text-animate scroll-reveal text-stagger-1">Get Started</a>
+                <h2 class="text-animate scroll-reveal text-stagger-2">100K+ gift options from brands they love.</h2>
+                <p class="text-animate scroll-reveal text-stagger-3">Send gifts your team and clients will actually want. Plus, if recipients prefer a different gift, they can easily swap for something else.</p>
+                <img src="heyjinie/images/H&M.png" class="hm-logo image-animate image-hover image-tilt scroll-reveal" alt="H&M" />
+                <div class="container">
+                 <div class="footer-decoration"></div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <section class="footer">
-        <div class="container">
-            <h2 class="text-animate scroll-reveal text-stagger-1">Hey Hinie is the easiest way to spread joy!</h2>
-            <img src="heyjinie/images/star.png" class="footer-decoration star-left image-animate image-hover image-tilt scroll-reveal" alt="Star">
-            <img src="heyjinie/images/star.png" class="footer-decoration star-right image-animate image-hover image-tilt scroll-reveal" alt="Star">
-            <img src="heyjinie/images/image.png" alt="gift-box" class="footer-gift image-animate image-hover image-tilt scroll-reveal" />
-        </div>
-    </section>
+        <!-- Footer -->
+        <section class="footer">
+            <div class="container">
+                <h2 class="text-animate scroll-reveal text-stagger-1">Hey Hinie is the easiest way to spread joy!</h2>
+                <img src="heyjinie/images/star.png" class="footer-decoration star-left image-animate image-hover image-tilt scroll-reveal" alt="Star">
+                <img src="heyjinie/images/star.png" class="footer-decoration star-right image-animate image-hover image-tilt scroll-reveal" alt="Star">
+                <img src="heyjinie/images/image.png" alt="gift-box" class="footer-gift image-animate image-hover image-tilt scroll-reveal" />
+            </div>
+        </section>
+    </div>
      <!-- page decorations aligned with background flow -->
      </div>
      
