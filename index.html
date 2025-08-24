@@ -560,6 +560,7 @@
             align-items: center;
             position: relative;
             overflow: visible;
+            min-width: 350px;
             min-height: 300px;
             height: auto;
         }
@@ -616,7 +617,7 @@
             height: auto;
         }
         .calendar-img { 
-            width: 280px; 
+            width: 400px !important; 
             max-width: 100%;
             height: auto;
         }
@@ -724,7 +725,7 @@
             background-image: url('./heyjinie/images/right_square.png');
             width: 2800px !important;
             height: 2800px !important;
-            background-size: 80% !important;
+            background-size: 90% !important;
             background-repeat: no-repeat !important;
             background-position: center !important;
         }
@@ -733,7 +734,7 @@
             background-image: url('./heyjinie/images/left_square.png');
             width: 2800px !important;
             height: 2800px !important;
-            background-size: 100% !important;
+            background-size: 90% !important;
             background-repeat: no-repeat !important;
             background-position: center !important;
         }
@@ -751,20 +752,12 @@
             background-image: url('./heyjinie/images/left_square.png');
             width: 2800px !important;
             height: 2800px !important;
-            background-size: 100% !important;
+            background-size: 90% !important;
             background-repeat: no-repeat !important;
             background-position: center !important;
         }
 
         /* Even features: right square */
-        .feature-list > .feature:nth-child(6) .feature-visual::before {
-            background-image: url('./heyjinie/images/right_square.png');
-            width: 2800px !important;
-            height: 2800px !important;
-            background-size: 100% !important;
-            background-repeat: no-repeat !important;
-            background-position: center !important;
-        }
 
         /* Gift Options Section */
         .gift-options {
@@ -1276,23 +1269,28 @@
             }
 
             .calendar-img {
-                width: 280px;
+                width: 280px !important;
                 max-width: 85%;
+                bottom: 10px;
             }
 
             .gift-box-img {
-                width: 240px;
+                width: 200px;
+                bottom: 10px;
+
                 max-width: 95%;
             }
 
             .dashboard-img {
-                width: 240px;
+                width: 260px;
                 max-width: 85%;
             }
 
             .marketing-img {
                 width: 200px;
                 max-width: 85%;
+                bottom: 10px;
+
             }
 
             /* Header responsive for small screens */
@@ -1423,7 +1421,7 @@
             .features .feature .feature-visual::before {
                 width: 800px;
                 height: 800px;
-                max-width: 100%;
+                max-width: 80%;
                 max-height: 95%;
                 overflow: visible;
             }
@@ -1432,20 +1430,20 @@
             .feature-list > .feature:nth-child(1) .feature-visual::before {
                 width: 800px !important;
                 height: 800px !important;
-                background-size: 100% !important;
+                background-size: 90% !important;
             }
             
             .feature-list > .feature:nth-child(3) .feature-visual::before,
             .feature-list > .feature:nth-child(5) .feature-visual::before {
                 width: 800px !important;
                 height: 800px !important;
-                background-size: 110% !important;
+                background-size: 90% !important;
             }
 
             .feature-list > .feature:nth-child(4) .feature-visual::before {
                 width: 800px !important;
                 height: 800px !important;
-                background-size: 100% !important;
+                background-size: 90% !important;
             }
 
             .feature-list > .feature:nth-child(2) .feature-visual::before {
